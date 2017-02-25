@@ -126,6 +126,10 @@ Firstly, I made a classifier with using HOG, spatial binning and color histogram
 Then I implemented sliding windows to search cars in an image. Overlapping windows and multiple window size will result in good result, but it will take more time to classify. So we have to think about that trade-off.
 In this project, I intntionally search on the right side of the image since the image is taken by a car which is on the left lane and there's no car to come from the left lane. If the car is on the center lane, we have to search on both sides(left and right). In this case, the model I proposed in this project will take far more time to detect cars. To solve this problem, I have to change the feature extraction part or sliding window part to lower the features or lower windows to search. Using convolutional neural network(CNN) will be another choice for feature extraction.
 
+The pipeline in this project still detects some false positives. One way of improving is to consider better classifier. To do this, CNN may be the great choice. Also more and more training data are needed to get more reliable classifier.
+Another way is to search where the roads exist. We don't have to search guardrails or sky. Narrowing down the searching region will help to detect minimum number of false positives. This will result in faster(ultimately real time) vehicle detection and tracking.
+
+The pipeline proposed in this project may fail in the poor weather condition or at night.
 
 
 
