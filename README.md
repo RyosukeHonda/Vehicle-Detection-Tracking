@@ -129,7 +129,7 @@ In this project, I intntionally search on the right side of the image since the 
 The pipeline in this project still detects some false positives. One way of improving is to consider better classifier. To do this, CNN may be the great choice. Also more and more training data are needed to get more reliable classifier.
 Another way is to search where the roads exist. We don't have to search guardrails or sky. Narrowing down the searching region will help to detect minimum number of false positives. This will result in faster(ultimately real time) vehicle detection and tracking.
 
-The pipeline proposed in this project may fail in the poor weather condition or at night.
+The pipeline proposed in this project may fail in the poor weather condition(especially foggy condition) or at night. These conditions are sometimes difficult even for human.
 
 
 
