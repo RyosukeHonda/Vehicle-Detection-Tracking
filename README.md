@@ -9,14 +9,15 @@ The goals / steps of this project are the following:
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
-[image1]: ./examples/car_not_car.png
-[image2]: ./examples/HOG_example.jpg
-[image3]: ./examples/sliding_windows.jpg
-[image4]: ./examples/sliding_window.jpg
-[image5]: ./examples/bboxes_and_heat.png
-[image6]: ./examples/labels_map.png
-[image7]: ./examples/output_bboxes.png
-[video1]: ./project_video.mp4
+[image1]: pics_readme/sample_image.png
+[image2]: pics_readme/hog_car.png
+[image3]: pics_readme/hog_notcar.png
+[image4]: pics_readme/sliding_window.png
+[image5]: pics_readme/pipeline_image.png
+[image6]: pics_readme/heatmap_image.png
+[image7]: pics_readme/detected_image.png
+[image8]: pics_readme/outcome_image.png
+[video1]: ./project_output5.mp4
 
 
 
@@ -42,6 +43,8 @@ Here is an example using the `HSV` color space and HOG parameters of `orientatio
 
 
 ![alt text][image2]
+
+![alt text][image3]
 
 ####2. Final choice of HOG parameters.
 
@@ -69,18 +72,18 @@ The feature vector lrngth is 5520 and test Accuracy of this support vector class
 Once we have made the classifier, we can search cars in an image by slicing the picture. Here's sliding window comes in. Sliding window is a method that captures images from top left to bottom right by sliding each image with overlapping. The picture below is an example of the sliding window which I used in this project.
 I chose several sizes and overlap rates of sliding window so that I can extract cars from an image with multiple windows.
 
-![alt text][image3]
+![alt text][image4]
 
 ####2. Examples of pipeline
 
 I searched with 5 different size and overlapping windows using HSV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. Here are some example images:
 
-![alt text][image4]
+![alt text][image5]
 ---
 
 ### Video Implementation
 
-####1. Here is the video outputof my pipeline. The link is [link to my video result](./project_video.mp4).
+####1. Here is the video outputof my pipeline. The link is [link to my video result](./project_output5.mp4).
 
 
 ####2. Methods for filtering false positives and combining overlapping bounding boxes
@@ -91,13 +94,13 @@ Here's an example result showing the heatmap image, the result of `scipy.ndimage
 
 ### Here is the image of bounding boxes and their corresponding heatmaps:
 
-![alt text][image5]
-
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from an image(Left:heatmap Right:integrated heatmap):
 ![alt text][image6]
 
-### Here the resulting bounding boxes are drawn onto the image:
+### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from an image(Left:heatmap Right:integrated heatmap):
 ![alt text][image7]
+
+### Here the resulting bounding boxes are drawn onto the image:
+![alt text][image8]
 
 
 
