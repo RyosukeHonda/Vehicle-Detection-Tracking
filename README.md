@@ -80,6 +80,9 @@ The code for this function is in the second code cell in the Pipeline.ipynb(`sli
 
 ####2. Examples of pipeline
 
+To get more reliable classifier, we need to choose what features we should choose and tune the hyperparameters which we have chosen. As per features I chose is mentioned above, so I'll discuss another point to get more reliability of the classifier. In the support vector machine algorithm, we have to find a separating line(hyperplane) which differenciate the two classes.
+There are some errors near the hyperplane. We can detect lower number of false positives by setting threshold(decision function). By choosing high value of decision function, we can get fewer number of false positives,but the number of true positives will also decrease. I tried bunch of parameter tuning and finally I chose 0.2 as the value of decision function.
+
 I searched with 5 different size and overlapping windows using HSV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. Here are some example images:
 
 ![alt text][image5]
