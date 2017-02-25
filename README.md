@@ -83,7 +83,9 @@ I searched with 5 different size and overlapping windows using HSV 3-channel HOG
 
 ### Video Implementation
 
-####1. Here is the video outputof my pipeline. The link is [link to my video result](./project_output5.mp4).
+####1. Here is the video outputof my pipeline. The link is [link to my video result](https://www.youtube.com/watch?v=NxMLEz48gVQ&feature=youtu.be).
+
+[![Result](pics_readme/link_to_video.png)](https://www.youtube.com/watch?v=NxMLEz48gVQ&feature=youtu.be)
 
 
 ####2. Methods for filtering false positives and combining overlapping bounding boxes
