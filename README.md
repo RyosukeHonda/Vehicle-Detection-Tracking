@@ -31,7 +31,7 @@ In order to detect our objects of interest, we need to know what differentiates 
 We can differenciate by choosing the color and gradients.
 Only color feature will result in finding false positive image so we also have to choose the shape features. When it comes to extracting shape features, Histogram of Oriented Gradients are good choice.
 
-The code for this step is contained in the first code cell of the IPython notebook (or in lines # through # of the file called `some_file.py`).
+The code for this step is contained in the second code cell of the Pipeline.ipynb(`get_hog_features` function)
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
@@ -72,6 +72,8 @@ The feature vector lrngth is 5520 and test Accuracy of this support vector class
 Once we have made the classifier, we can search cars in an image by slicing the picture. Here's sliding window comes in. Sliding window is a method that captures images from top left to bottom right by sliding each image with overlapping. The picture below is an example of the sliding window which I used in this project.
 I chose several sizes and overlap rates of sliding window so that I can extract cars from an image with multiple windows.
 
+The code for this function is in the second code cell in the Pipeline.ipynb(`slide_window` function)
+
 ![alt text][image4]
 
 ####2. Examples of pipeline
@@ -93,6 +95,8 @@ I searched with 5 different size and overlapping windows using HSV 3-channel HOG
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.
 
 Here's an example result showing the heatmap image, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the image:
+
+These functions are in the 7th code cell in the Pipeline.ipynb(heatmap:`add_heat`, threshold:`apply_threshold`,vehicle position:`drawlabels_bboxes` function)
 
 ### Here is the image of bounding boxes and their corresponding heatmaps:
 
